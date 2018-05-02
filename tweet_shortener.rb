@@ -8,7 +8,7 @@ def word_substituter(tweets)
   keys.each do |key|
     words.each do |word|
       if word == key.to_s
-        if i = words.index(word)
+        if i == words.index(word)
           words[i] = dictionary[word.to_sym]
         else
           words[i] = word
@@ -17,4 +17,7 @@ def word_substituter(tweets)
     end
   end
   words.join(' ')
+end
+
+def bulk_tweet_shortener
 end
