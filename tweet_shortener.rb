@@ -8,7 +8,7 @@ def word_substituter(tweets)
   keys.each do |key|
     words.each do |word|
       if word == key.to_s
-        word = dictionary[word.to_sym]
+        word = dictionary[key]
       end
     end
   end
