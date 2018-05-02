@@ -6,8 +6,8 @@ def word_substituter(tweet)
   keys = dictionary.keys
   items = tweet.split(/\b/)
   new_tweet = items.map do |item|
-    if keys.include?(item.to_sym)
-      item = dictionary[item.to_sym]
+    if keys.include?(item.downcase.to_sym)
+      item = dictionary[item.downcase.to_sym]
     else
       item
     end
