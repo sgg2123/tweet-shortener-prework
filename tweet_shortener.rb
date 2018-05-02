@@ -5,7 +5,7 @@ end
 def word_substituter(tweets)
   keys = dictionary.keys
   words = tweets.split(' ')
-  keys.each do |key|
+  keys.map do |key|
     words.map do |word|
       if word == key.to_s
         word = dictionary[key]
